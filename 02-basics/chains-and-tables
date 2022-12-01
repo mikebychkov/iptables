@@ -1,0 +1,13 @@
+NETFILTER CHAINS:
+INPUT - incoming packets
+OUTPUT - outgoing packets
+FORWARD - routed packets
+PREROUTING - DNAT (Port Forwarding)
+POSTROUTING - SNAT (Masquerade)
+
+NETFILTER TABLES:
+filter 	- default table. 		chains: INPUT, OUTPUT, FORWARD
+nat 	- SNAT and DNAT. 		chains: PREROUTING, POSTROUTING, OUTPUT(for locally generated packets)
+mangle 	- packet alteration. 		chains: PREROUTING, INPUT, FORWARD, OUTPUT, POSTROUTING
+raw 	- NOTRACK target on the packet. chains: PREROUTING, OUTPUT
+
